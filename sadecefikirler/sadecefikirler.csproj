@@ -164,14 +164,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Absatract\IDataBusiness.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Concrete\CategoryConcrete.cs" />
+    <Compile Include="Concrete\PostConcrete.cs" />
+    <Compile Include="Concrete\TagsConcrete.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PartialManagerController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -203,16 +208,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SadecefikirlerModels.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SP_GetProject_Result.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tag.cs">
       <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\PostDetailsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\h1.jpg" />
+    <Content Include="Content\script\bootstrap.js" />
+    <Content Include="Content\script\bootstrap.min.js" />
+    <None Include="Content\script\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\script\jquery-1.10.2.js" />
+    <Content Include="Content\script\jquery-1.10.2.min.js" />
+    <None Include="Content\script\jquery.validate-vsdoc.js" />
+    <Content Include="Content\script\jquery.validate.js" />
+    <Content Include="Content\script\jquery.validate.min.js" />
+    <Content Include="Content\script\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\script\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\script\modernizr-2.6.2.js" />
+    <Content Include="Content\script\respond.js" />
+    <Content Include="Content\script\respond.min.js" />
+    <None Include="Content\script\_references.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style\bootstrap.min.css" />
+    <Content Include="Content\style\icon.css" />
+    <Content Include="Content\style\idangerous.swiper.css" />
+    <Content Include="Content\style\images\ui-bg_diagonals-thick_18_b81900_40x40.html" />
+    <Content Include="Content\style\images\ui-bg_diagonals-thick_20_666666_40x40.html" />
+    <Content Include="Content\style\images\ui-bg_flat_10_000000_40x100.html" />
+    <Content Include="Content\style\images\ui-bg_glass_100_f6f6f6_1x400.html" />
+    <Content Include="Content\style\images\ui-bg_glass_100_fdf5ce_1x400.html" />
+    <Content Include="Content\style\images\ui-bg_glass_65_ffffff_1x400.html" />
+    <Content Include="Content\style\images\ui-bg_highlight-soft_100_eeeeee_1x100.html" />
+    <Content Include="Content\style\images\ui-icons_222222_256x240.html" />
+    <Content Include="Content\style\images\ui-icons_228ef1_256x240.html" />
+    <Content Include="Content\style\images\ui-icons_ef8c08_256x240.html" />
+    <Content Include="Content\style\images\ui-icons_ffd27a_256x240.html" />
+    <Content Include="Content\style\images\ui-icons_ffffff_256x240.html" />
+    <Content Include="Content\style\jquery-ui.css" />
+    <Content Include="Content\style\loader.css" />
+    <Content Include="Content\style\magnific.css" />
+    <Content Include="Content\style\style-green.html" />
+    <Content Include="Content\style\style-greens.html" />
+    <Content Include="Content\style\style-orange.html" />
+    <Content Include="Content\style\style-oranges.html" />
+    <Content Include="Content\style\style-red.html" />
+    <Content Include="Content\style\style-reds.html" />
+    <Content Include="Content\style\stylesheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -235,6 +284,7 @@
     <Content Include="Models\SadecefikirlerModels.edmx.diagram">
       <DependentUpon>SadecefikirlerModels.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\script\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -260,7 +310,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -282,14 +331,18 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Post\Index.cshtml" />
+    <Content Include="Views\PartialManager\CategoryMenu.cshtml" />
+    <Content Include="Views\PartialManager\TagsMenu.cshtml" />
+    <Content Include="Views\PartialManager\PostPartial.cshtml" />
+    <Content Include="Views\Post\Categories.cshtml" />
+    <Content Include="Views\Shared\Detail.cshtml" />
+    <Content Include="Views\Post\Blog.cshtml" />
+    <Content Include="Views\Post\PostDetails.cshtml" />
+    <Content Include="Views\Shared\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
-    <Folder Include="Content\img\" />
-    <Folder Include="Content\script\" />
-    <Folder Include="Content\style\" />
-    <Folder Include="Views\deneme\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

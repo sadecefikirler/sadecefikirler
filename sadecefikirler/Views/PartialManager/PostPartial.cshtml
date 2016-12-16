@@ -1,9 +1,9 @@
 ﻿@using Microsoft.AspNet.Identity
 @model List<sadecefikirler.Models.Post>
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "PostPartial";
 }
+
 @foreach (var post in Model)
 {
     if (@post.Active == true)
@@ -37,4 +37,3 @@
         </div>
     }
 }
-
