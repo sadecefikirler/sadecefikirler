@@ -12,8 +12,6 @@ namespace sadecefikirler.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
     public partial class sadecefikirlerEntities : DbContext
     {
@@ -31,10 +29,5 @@ namespace sadecefikirler.Models
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
-    
-        public virtual ObjectResult<SP_GetProject_Result> SP_GetProject()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_GetProject_Result>("SP_GetProject");
-        }
     }
 }

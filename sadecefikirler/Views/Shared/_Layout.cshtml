@@ -1,9 +1,7 @@
-﻿@using Microsoft.AspNet.Identity
-@model List<sadecefikirler.Models.Post>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
+<!-- Mirrored from demo.nrgthemes.com/projects/nrgnetwork/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Nov 2016 13:40:48 GMT -->
 <head>
     <title>Sadece Fikirler</title>
     <meta charset="utf-8">
@@ -11,21 +9,13 @@
     <link rel="shortcut icon" href="~/Content/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="~/Content/style/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/Content/style/icon.css">
     <link rel="stylesheet" href="~/Content/style/loader.css">
     <link rel="stylesheet" href="~/Content/style/idangerous.swiper.css">
     <link rel="stylesheet" href="~/Content/style/jquery-ui.css">
     <link rel="stylesheet" href="~/Content/style/stylesheet.css">
-
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/icon.css">
-    <link rel="stylesheet" href="style/loader.css">
-    <link rel="stylesheet" href="style/idangerous.swiper.css">
-    <link rel="stylesheet" href="style/jquery-ui.css">
-    <link rel="stylesheet" href="~/Content/style/stylesheet.css">
-
+    
     <!--[if lt IE 10]>
         <link rel="stylesheet" type="text/css" href="~/Content/style/ie-9.css" />
     <![endif]-->
@@ -65,26 +55,26 @@
                 <div class="header-menu-block">
                     <button class="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button>
                     <ul class="header-menu" id="one">
-                        <li><a href="activity.html">Projeler</a></li>
+                        <li><a href="activity.html">Activity</a></li>
                         <li>
-                            @Html.ActionLink("Nasıl Yapılır?", "Blog", "Post")
+                            <a href="search.html">Discover</a>
                             <ul>
-                                <li><a href="search.html">Mvc</a></li>
-                                <li><a href="people.html">Arduino</a></li>
-                                <li><a href="gallery.html">IOT</a></li>
+                                <li><a href="search.html">Explore</a></li>
+                                <li><a href="people.html">People</a></li>
+                                <li><a href="gallery.html">Galleries</a></li>
                             </ul>
                         </li>
-                        <li>@Html.ActionLink("Haberler", "Blog", "Post")</li>
-                        <li><a href="site-map.html">Takım Oluştur</a></li>
-                        <li><a href="organization.html">Bize Ulaşın</a></li>
-                        <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Proje Ekle</a></li>
+                        <li><a href="author-login.html">My Portfolio</a></li>
+                        <li><a href="site-map.html">Site Map</a></li>
+                        <li><a href="organization.html">Organization</a></li>
+                        <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Add Work </a></li>
                     </ul>
                 </div>
                 <div class="login-header-block">
                     <div class="login_block">
                         <a class="btn-login btn color-1 size-2 hover-2" href="#">
                             <i class="fa fa-user"></i>
-                            Giriş
+                            Log in
                         </a>
                     </div>
                 </div>
@@ -97,10 +87,10 @@
         <div class="head-bg">
             <div class="head-bg-img"></div>
             <div class="head-bg-content">
-                <h1>SADECE FİKİRLER</h1>
+                <h1>Your Best Social Network Template</h1>
                 <p>Donec in rhoncus tortor. Sed tristique auctor ligula vel viverra</p>
                 <a class="btn color-1 size-1 hover-1"><i class="fa fa-facebook"></i>sign up via facebook</a>
-                <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>Üye Ol</a>
+                <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>sign up now</a>
             </div>
         </div>
         <div class="container-fluid cd-main-content custom-container">
@@ -167,9 +157,38 @@
             <div class="row">
 
                 <div class="col-md-2 left-feild">
-                    @{ Html.RenderAction("CategoryMenu", "PartialManager"); }
                     <div class="be-vidget">
-                    @{ Html.RenderAction("TagsMenu", "PartialManager"); }
+                        <h3 class="letf-menu-article">
+                            Popular Creative Filds
+                        </h3>
+                        <div class="creative_filds_block">
+                            <div class="ul">
+                                <a data-filter=".category-1" class="filter">Graphic Design		</a>
+                                <a data-filter=".category-2" class="filter">Photography			</a>
+                                <a data-filter=".category-3" class="filter">Interaction Design	</a>
+                                <a data-filter=".category-4" class="filter">Art Direction		</a>
+                                <a data-filter=".category-5" class="filter">Illustration		</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="be-vidget">
+                        <h3 class="letf-menu-article">
+                            Popular Tags
+                        </h3>
+                        <div class="tags_block clearfix">
+                            <ul>
+                                <li><a data-filter=".category-6" class="filter">photoshop</a></li>
+                                <li><a data-filter=".category-1" class="filter">graphic</a></li>
+                                <li><a data-filter=".category-2" class="filter">art</a></li>
+                                <li><a data-filter=".category-3" class="filter">website</a></li>
+                                <li><a data-filter=".category-4" class="filter">logo</a></li>
+                                <li><a data-filter=".category-5" class="filter">identity</a></li>
+                                <li><a data-filter=".category-6" class="filter">logo design</a></li>
+                                <li><a data-filter=".category-1" class="filter">interactive</a></li>
+                                <li><a data-filter=".category-2" class="filter">blue</a></li>
+                                <li><a data-filter=".category-3" class="filter">branding</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="be-vidget">
                         <h3 class="letf-menu-article">
@@ -220,7 +239,9 @@
 
                 <div class="col-md-10">
                     <div id="container-mix" class="row _post-container_">
-                        @RenderBody()       
+                        @RenderBody()
+                        
+
                     </div>
                 </div>
 

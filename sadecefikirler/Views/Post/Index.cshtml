@@ -4,20 +4,21 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @foreach (var post in Model)
 {
-    if (@post.Active == true)
+    if (@post.Active==true)
     {
         <div class="category-1 mix custom-column-5">
             <div class="be-post">
-                <a href="../../../../Post/PostDetails/@post.Id" class="be-img-block">
-                    <img src="~/Content/img/h1.jpg" alt="omg">
+                <a href="page1.html" class="be-img-block">
+                    <img src="~/Content/img/p1.jpg" alt="omg">
                 </a>
                 <a href="page1.html" class="be-post-title">@post.Title</a>
                 <span>
-                    @foreach (var category in post.Categories)
+                    @foreach (var category in post.Categories.ToList())
                     {
-                        <a href="blog-detail-2.html" class="be-post-tag">@category.Name , </a>
+                        <a href="blog-detail-2.html" class="be-post-tag">@category.Name</a>
                     }
 
                     @*<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,
@@ -36,5 +37,5 @@
             </div>
         </div>
     }
+    
 }
-

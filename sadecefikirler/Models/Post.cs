@@ -28,7 +28,6 @@ namespace sadecefikirler.Models
         public string UserId { get; set; }
         public Nullable<System.DateTime> PublishDate { get; set; }
         public Nullable<bool> Active { get; set; }
-        public byte[] Picture { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }

@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /*
 
 /*  		00 - RESET   				*/
@@ -1714,7 +1714,7 @@ display: inline-block; float: none; margin: 0 10px;}
 
 .blog-filter .btn:last-child { margin-right: 0px; }
 
-#content-block .blog-filter .btn:last-child { margin-bottom: 0px; }
+#content-block .blog-filter .btn:last-child { margin-bottom: 10px; }
 
 .blog-post { border: 1px solid #edeff2; border-radius: 5px; overflow: hidden; margin-bottom: 50px; }
 
