@@ -66,14 +66,14 @@
                     <ul class="header-menu" id="one">
                         <li><a href="activity.html">Projeler</a></li>
                         <li>
-                            <a href="~/Views/Shared/Page1.cshtml">Nasıl Yapılır?</a>
+                            @Html.ActionLink("Nasıl Yapılır?", "Blog", "Post")
                             <ul>
                                 <li><a href="search.html">Mvc</a></li>
                                 <li><a href="people.html">Arduino</a></li>
                                 <li><a href="gallery.html">IOT</a></li>
                             </ul>
                         </li>
-                        <li><a href="author-login.html">Haberler</a></li>
+                        <li>@Html.ActionLink("Haberler", "Blog", "Post")</li>
                         <li><a href="site-map.html">Takım Oluştur</a></li>
                         <li><a href="organization.html">Bize Ulaşın</a></li>
                         <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Proje Ekle</a></li>
