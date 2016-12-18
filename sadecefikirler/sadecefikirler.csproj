@@ -280,6 +280,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\blog_1.jpg" />
     <Content Include="Models\SadecefikirlerModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SadecefikirlerModels.edmx</DependentUpon>
@@ -355,11 +356,12 @@
     <Content Include="Views\Post\PostDetails.cshtml" />
     <Content Include="Views\Shared\Blog.cshtml" />
     <Content Include="Views\Post\Share.cshtml" />
+    <Content Include="Views\Post\NewsBlog.cshtml" />
+    <Content Include="Views\Post\NewsBlogDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

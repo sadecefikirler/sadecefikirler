@@ -25,12 +25,26 @@ namespace sadecefikirler.Controllers
             return View(result);
         }
 
+        public ActionResult NewsBlogDetails(int id)
+        {
+            var db = new sadecefikirlerEntities();
+            var result = db.Posts.Where(p => p.Id == id).Take(1).ToList();
+            return View(result);
+        }
+
         public ActionResult Categories(int id)
         {
             //get categories falan yaparsın bunun için categorie name ye göre arar
             
             return View(pc.GetCategoriePosts(id));
         }
+
+        public ActionResult NewsBlog()
+        {
+            var db = new sadecefikirlerEntities();
+            return View(db.Posts.ToList());
+        }
+
         public ActionResult Blog()
         {
             var db = new sadecefikirlerEntities();
