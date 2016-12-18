@@ -182,10 +182,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs">
+      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
       <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
@@ -208,9 +223,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SadecefikirlerModels.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\SP_GetProject_Result.cs">
-      <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Tag.cs">
       <DependentUpon>SadecefikirlerModels.tt</DependentUpon>
     </Compile>
@@ -222,6 +234,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\h1.jpg" />
+    <Content Include="Content\jquery.tag-editor.css" />
+    <Content Include="Content\jquery.tag-editor.js" />
+    <Content Include="Content\jquery.tag-editor.min.js" />
     <Content Include="Content\script\bootstrap.js" />
     <Content Include="Content\script\bootstrap.min.js" />
     <None Include="Content\script\jquery-1.10.2.intellisense.js" />
@@ -277,6 +292,7 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\script\jquery-1.10.2.min.map" />
     <EntityDeploy Include="Models\SadecefikirlerModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SadecefikirlerModels.Designer.cs</LastGenOutput>
@@ -284,7 +300,6 @@
     <Content Include="Models\SadecefikirlerModels.edmx.diagram">
       <DependentUpon>SadecefikirlerModels.edmx</DependentUpon>
     </Content>
-    <Content Include="Content\script\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -339,10 +354,12 @@
     <Content Include="Views\Post\Blog.cshtml" />
     <Content Include="Views\Post\PostDetails.cshtml" />
     <Content Include="Views\Shared\Blog.cshtml" />
+    <Content Include="Views\Post\Share.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
