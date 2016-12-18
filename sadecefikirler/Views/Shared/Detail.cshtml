@@ -55,18 +55,19 @@
                 <div class="header-menu-block">
                     <button class="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button>
                     <ul class="header-menu" id="one">
-                        <li><a href="activity.html">Activity</a></li>
+                        <li><a href="activity.html">Projeler</a></li>
                         <li>
-                            <a href="search.html">Discover</a>
+                            @Html.ActionLink("Nasıl Yapılır?", "Blog", "Post")
                             <ul>
-                                <li><a href="search.html">Explore</a></li>
-                                <li><a href="people.html">People</a></li>
-                                <li><a href="gallery.html">Galleries</a></li>
+                                <li><a href="search.html">Mvc</a></li>
+                                <li><a href="people.html">Arduino</a></li>
+                                <li><a href="gallery.html">IOT</a></li>
                             </ul>
                         </li>
-                        <li><a href="author-login.html">My Portfolio</a></li>
-                        <li><a href="site-map.html">Site Map</a></li>
-                        <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Add Work </a></li>
+                        <li>@Html.ActionLink("Haberler", "Blog", "Post")</li>
+                        <li><a href="site-map.html">Takım Oluştur</a></li>
+                        <li><a href="organization.html">Bize Ulaşın</a></li>
+                        <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Proje Ekle</a></li>
                     </ul>
                 </div>
                 <div class="login-header-block">
