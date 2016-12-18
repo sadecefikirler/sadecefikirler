@@ -10,15 +10,13 @@
 namespace sadecefikirler.Models
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class SP_GetProject_Result
+    public partial class C__MigrationHistory
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string UserId { get; set; }
-        public Nullable<System.DateTime> PublishDate { get; set; }
-        public Nullable<bool> Active { get; set; }
-        public byte[] Picture { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

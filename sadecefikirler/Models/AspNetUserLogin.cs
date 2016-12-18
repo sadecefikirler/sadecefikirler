@@ -12,14 +12,12 @@ namespace sadecefikirler.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class AspNetUserLogin
     {
-        public int Id { get; set; }
-        public Nullable<int> PostId { get; set; }
+        public string LoginProvider { get; set; }
+        public string ProviderKey { get; set; }
         public string UserId { get; set; }
-        public string Message { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
-        public virtual Post Post { get; set; }
     }
 }
