@@ -55,7 +55,7 @@
                 <div class="header-menu-block">
                     <button class="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button>
                     <ul class="header-menu" id="one">
-                        <li><a href="activity.html">Projeler</a></li>
+                        <li>@Html.ActionLink("Projeler", "Index", "Post")</li>
                         <li>
                             @Html.ActionLink("Nasıl Yapılır?", "Blog", "Post")
                             <ul>
@@ -66,7 +66,7 @@
                         </li>
                         <li>@Html.ActionLink("Haberler", "NewsBlog", "Post")</li>
                         <li><a href="site-map.html">Takım Oluştur</a></li>
-                        <li><a href="organization.html">Bize Ulaşın</a></li>
+                        <li>@Html.ActionLink("Bize Ulaşın", "ContactUs", "Post")</li>
                         <li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work.html">Proje Ekle</a></li>
                     </ul>
                 </div>

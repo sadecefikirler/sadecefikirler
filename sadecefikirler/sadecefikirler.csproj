@@ -358,6 +358,7 @@
     <Content Include="Views\Post\Share.cshtml" />
     <Content Include="Views\Post\NewsBlog.cshtml" />
     <Content Include="Views\Post\NewsBlogDetails.cshtml" />
+    <Content Include="Views\Post\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

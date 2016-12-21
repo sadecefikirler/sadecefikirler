@@ -88,5 +88,11 @@ namespace sadecefikirler.Controllers
             return View();
         }
 
+
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
     }
 }

@@ -10,7 +10,7 @@
 
 
     <div class="container be-detail-container">
-        <h2 class="content-title">FİKİRLER</h2>
+        <h2 class="content-title">NASIL YAPILIR?</h2>
         <div class="blog-wrapper blog-grid">
             <div class="blog-filter">
                @foreach (var post in Model)
@@ -36,7 +36,7 @@
                                 <span>by <a href="blog-detail-2.html">@User.Identity.Name</a></span>
                             </div>
                         </div>
-                        <a class="post-preview post-image" href="blog-detail.html"><img class="img-responsive img-full" src="~/Content/img/@post.Picture" alt=""></a>
+                        <a class="post-preview post-image" href="../../../../Post/NewsBlogDetails/@post.Id"><img class="img-responsive img-full" src="~/Content/img/@post.Picture" alt=""></a>
                         <div class="post-desc">
                             <div class="post-category">
                                 @foreach (var category in post.Categories)
@@ -44,7 +44,7 @@
                                     @category.Name
                                 }
                             </div>
-                            <a class="post-label" href="blog-detail.html">@post.Title</a>
+                            <a class="post-label" href="../../../../Post/NewsBlogDetails/@post.Id">@post.Title</a>
                             <div class="post-text">@post.Content</div>
                             <a class="btn color-1 size-2 hover-1" href="blog-detail.html">Devamını Oku...</a>
                             <div class="info-block">

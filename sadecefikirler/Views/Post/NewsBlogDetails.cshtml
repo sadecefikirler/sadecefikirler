@@ -7,10 +7,11 @@
     ViewBag.Title = "NewsBlogDetails";
     Layout = "~/Views/Shared/Blog.cshtml";
 }
-
+@foreach (var post in Model)
+{
 <div id="content-block">
     <div class="container be-detail-container">
-        <h2 class="content-title">Our Blog</h2>
+        <h2 class="content-title">@post.Title</h2>
         <div class="blog-wrapper blog-list blog-fullwith">
 
             <div class="row">
@@ -22,26 +23,29 @@
                                 <span><i class="fa fa-eye"></i> 753</span>
                                 <span><i class="fa fa-comment-o"></i> 50</span>
                                 <span class="be-text-tags">
-                                    <a href="blog-detail-2.html" class="be-post-tag">Interactiob design</a>,
-                                    <a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,
-                                    <a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
+                                 
+                                        @foreach (var item in post.Categories)
+                                        {
+                                            <a href="blog-detail-2.html" class="be-post-tag">@item.Name, </a>
+                                        }
+                                   
                                 </span>
                             </div>
                         </div>
                         <div class="be-large-post-align blog-content">
                             <div class="be-text-tags clearfix custom-a-b">
                                 <div class="post-date">
-                                    <i class="fa fa-clock-o"></i> April 23, 2015
+                                    <i class="fa fa-clock-o"></i> @post.PublishDate
                                 </div>
                                 <div class="author-post">
                                     <img src="img/a1.png" alt="" class="ava-author">
-                                    <span>by <a href="blog-detail-2.html">Hoang Nguyen</a></span>
+                                    <span>by <a href="blog-detail-2.html">@User.Identity.GetUserName()</a></span>
                                 </div>
                             </div>
                             
                             <div class="post-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec felis efficitur, lobortis erat et, placerat elit. Proin at ligula lorem. In viverra neque auctor metus consectetur varius. Cras sollicitudin arcu eu tincidunt tristique. Donec accumsan hendrerit nunc sit amet interdum. Donec rhoncus a lacus quis imperdiet.Nam tempus vitae sem pellentesque aliquam.
+                                   @post.Content
                                 </p>
                             </div>
                         </div>
@@ -53,7 +57,7 @@
                                 <p>Phasellus feugiat pulvinar sagittis. Vivamus sit amet purus quis magna laoreet suscipit in sit amet nisl. Etiam tempus tortor in interdum consectetur. Etiam gravida tellus leo. Mauris pulvinar ut leo in varius. Mauris iaculis bibendum tempus. Proin eget dolor lobortis, facilisis nisi sit amet, varius quam. Nam eu facilisis lorem. In hac habitasse platea dictumst. Aenean enim massa, viverra in diam ac, gravida egestas risus.</p>
 
                                 <p>Morbi quis ante erat. Nulla sodales, diam at accumsan mattis, dolor eros accumsan nisi, non porttitor ipsum nunc sit amet dolor.Duis vehicula odio sed consectetur tincidunt. Vestibulum vitae elementum ipsum. Nam porttitor quam vitae ex sollicitudin, bibendum fermentum nulla aliquet. Proin gravida ac risus eu scelerisque. Cras placerat vehicula arcu sed luctus.</p>
-                                <img class="img-leftblog" src="img/blog_img_3.jpg" alt="">
+                                <img class="img-leftblog" src="~/Images/blog_1.jpg" alt="">
                                 <p>Sed laoreet tincidunt purus, tempus viverra sapien fringilla sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in sem lectus. Sed ut augue suscipit, vehicula ante sit amet</p>
 
                                 <p>Sed laoreet tincidunt purus, tempus viverra sapien fringilla sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in sem lectus. Sed ut augue suscipit, vehicula ante sit amet</p>
@@ -64,7 +68,7 @@
 
                                 <p>Aliquam et sem quis risus ornare ullamcorper eu non elit. In egestas porttitor hendrerit. Fusce lacinia iaculis nibh, quis consectetur neque volutpat nec.</p>
 
-                                <img class="img-fullblog" src="img/blog_img_4.jpg" alt="">
+                                <img class="img-fullblog" src="~/Images/blog_1.jpg" alt="">
 
                                 <p>Duis vehicula odio sed consectetur tincidunt. Vestibulum vitae elementum ipsum. Nam porttitor quam vitae ex sollicitudin, bibendum fermentum nulla aliquet. Proin gravida ac risus eu scelerisque. Cras placerat vehicula arcu sed luctus. Vivamus ullamcorper convallis tortor in faucibus. tempus. Eget pharetra ex interdum.</p>
                             </div>
@@ -76,11 +80,12 @@
                                         <h4 class="be-bottom-title">Tags</h4>
                                         <div class="tags_block clearfix">
                                             <ul>
-                                                <li><a href="blog-detail-2.html">photoshop</a></li>
-                                                <li><a href="blog-detail-2.html">national geographic</a></li>
-                                                <li><a href="blog-detail-2.html">nature</a></li>
-                                                <li><a href="blog-detail-2.html">responsive web design</a></li>
-                                                <li><a href="blog-detail-2.html">animals</a></li>
+
+                                                @foreach (var item in post.Tags)
+                                                {
+                                                    <li><a href="blog-detail-2.html">@item.Name</a></li>
+                                                }
+
                                             </ul>
                                         </div>
                                     </div>
@@ -113,7 +118,7 @@
                                     Polygonal bear. Its all about poly.
                                 </a>
                                 <a href="blog-detail-2.html" class="be-img-block">
-                                    <img src="img/be_post_3.jpg" alt="omg">
+                                    <img src="~/Images/blog_1.jpg" alt="omg">
                                 </a>
                             </div>
                         </div>
@@ -126,7 +131,7 @@
                                     Wonderfiull house. The fairy tail in pictures
                                 </a>
                                 <a href="blog-detail-2.html" class="be-img-block">
-                                    <img src="img/be_post_5.jpg" alt="omg">
+                                    <img src="~/Images/blog_1.jpg" alt="omg">
                                 </a>
                             </div>
                         </div>
@@ -222,3 +227,4 @@
         </div>
     </div>
 </div>
+}
